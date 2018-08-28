@@ -3,7 +3,7 @@
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-    <b-navbar-brand href="#" class="col-sm-3 col-md-2 mr-0">SDUI</b-navbar-brand>
+    <b-navbar-brand href="#" class="col-sm-3 col-md-2 mr-0">Server Driven UI Admin</b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
 
