@@ -71,6 +71,9 @@ export default {
   },
   computed: {
     responseFormat () {
+      if (!this.screen || !this.screen.widgets) {
+        return []
+      }
       const rows = this.screen.widgets.map(w => {
         return {
           ui: w.type
