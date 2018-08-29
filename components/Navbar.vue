@@ -3,19 +3,20 @@
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-    <b-navbar-brand href="#" class="col-sm-3 col-md-2 mr-0">Server Driven UI Admin</b-navbar-brand>
-
-    <b-collapse is-nav id="nav_collapse">
-
-      <b-navbar-nav>
-        <b-nav-item href="/screens">Screens</b-nav-item>
-        <b-nav-item href="/widgets">Widgets</b-nav-item>
-      </b-navbar-nav>
-
-      <!-- Right aligned nav items -->
+    <b-navbar-brand
+      :to="{ name: 'index' }"
+      class="col-sm-3 col-md-2 mr-0"
+    >SDUI</b-navbar-brand>
       <b-navbar-nav class="ml-auto">
       </b-navbar-nav>
 
+    <b-collapse is-nav id="nav_collapse">
+      <b-navbar-nav>
+        <b-nav-item :to="{ name: 'screens' }">Screens</b-nav-item>
+        <b-nav-item :to="{ name: 'widgets' }">Widgets</b-nav-item>
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
     </b-collapse>
   </b-navbar>
 </template>
