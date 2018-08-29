@@ -68,3 +68,10 @@ exports.createWidget = (req, res) => {
     return res.json(result)
   })
 }
+
+/**
+ * UI Screen by type
+ */
+exports.getScreenByType = (req, res) => {
+  return res.json({})
+}
