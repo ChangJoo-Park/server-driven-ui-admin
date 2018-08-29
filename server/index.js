@@ -52,9 +52,12 @@ async function start() {
 
   // Listen the server
   app.listen(port, host)
-  mongoose.connect('mongodb://localhost/sdui').then(_ => {
-    console.log('Connected MongoDB')
-  })
+  mongoose
+    .connect('mongodb://localhost/sdui', { useNewUrlParser: true })
+    .then(_ => {
+      console.log('Connected MongoDB')
+    })
   console.log('Server listening on http://' + host + ':' + port) // eslint-disable-line no-console
 }
+
 start()
