@@ -5,14 +5,14 @@
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="/widgets/new">
-                New Widget
-              </a>
+              <nuxt-link class="nav-link" :to="{ name: 'widgets-new' }">
+                New Widgets
+                </nuxt-link>
             </li>
             <li class="nav-item" v-for="widget in widgets" :key="widget._id">
-              <a class="nav-link" :href="`/widgets/${widget._id}`">
+              <nuxt-link class="nav-link" :to="{ name: 'widgets-id', params: { id: widget._id } }">
                 {{ widget.name }}
-              </a>
+              </nuxt-link>
             </li>
           </ul>
         </div>

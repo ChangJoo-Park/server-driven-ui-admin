@@ -5,14 +5,14 @@
         <div class="sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="/screens/new">
+              <nuxt-link class="nav-link" :to="{ name: 'screens-new' }">
                 New Screen
-              </a>
+                </nuxt-link>
             </li>
             <li class="nav-item" v-for="screen in screens" :key="screen._id">
-              <a class="nav-link" :href="`/screens/${screen._id}`">
+              <nuxt-link class="nav-link" :to="{ name: 'screens-id', params: { id: screen._id } }">
                 {{ screen.name }}
-              </a>
+              </nuxt-link>
             </li>
           </ul>
         </div>
